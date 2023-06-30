@@ -2,6 +2,10 @@
 
 /* cascade */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   font: 100%/1.5 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -30,8 +34,8 @@ body {
   gap: 2rem;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 2rem;
   min-height: calc(100vh - 4rem);
+  padding: 2rem;
 }
 
 .brand {
@@ -48,6 +52,7 @@ h1 {
   font-size: 12rem;
   letter-spacing: -0.05em;
   line-height: 0.9;
+  margin: 0 0 0 -0.05em;
 }
 
 .split {
@@ -73,11 +78,17 @@ h3 {
 .wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 .card {
-  flex: 1 0 10rem;
+  border-radius: 1rem;
   cursor: pointer;
+  flex: 1 0 15rem;
+  margin: -1rem;
+  padding: 1rem;
+}
+.card:hover {
+  background: #fff1;
 }
 
 /* colors */
@@ -88,4 +99,16 @@ body {
 }
 .invert {
   color: #fff;
+}
+
+/* adaptive */
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 5rem;
+  }
 }
