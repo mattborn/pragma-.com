@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+/* cascade */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--background-color);
+  color: var(--text-color);
+  font: 500 100%/1.5 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  text-rendering: geometricPrecision;
+}
+
+/* layout */
+
+body {
+  background: #244;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background: #fff1;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem -1rem #0003;
+  cursor: pointer;
+  flex: 1 0 18rem;
+  padding: 2rem;
+}
+.card:hover {
+  background: #fff;
+  color: #244;
+}
+
+i {
+  font-size: 2rem;
+}
