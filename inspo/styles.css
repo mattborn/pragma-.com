@@ -2,6 +2,10 @@
 
 /* cascade */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   background: var(--background-color);
@@ -11,14 +15,19 @@ body {
   text-rendering: geometricPrecision;
 }
 
+h1,
+p {
+  margin: 0;
+}
+
 /* layout */
 
 body {
-  background: #244;
+  background: #244e;
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0 auto;
   max-width: 1200px;
   min-height: 100vh;
@@ -32,18 +41,46 @@ body {
 }
 
 .card {
-  background: #fff1;
+  align-items: flex-start;
+  background: #244;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem -1rem #0003;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
   flex: 1 0 18rem;
-  padding: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 12rem 2rem 2rem;
+  position: relative;
 }
 .card:hover {
-  background: #fff;
-  color: #244;
+  outline: 8px solid #fff;
 }
 
-i {
+.card-name {
+}
+.card-tag {
+  align-items: center;
+  background: #fff1;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  padding: 12px 1rem;
+}
+.card-icon {
+  font-size: 1.2rem;
+}
+.card-img {
+  height: 10rem;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.fa-fire-flame-simple {
   font-size: 2rem;
 }
